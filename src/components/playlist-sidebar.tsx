@@ -57,7 +57,7 @@ export default function PlaylistSidebar() {
                             onClickChannel(channel);
                         }}>
                             <div className="w-10 h-10 flex-shrink-0">
-                                <img src={channel.tvgLogo} className="w-full h-full object-cover" onError={(e) => e.currentTarget.parentElement?.classList.add('hidden')} />
+                                <img src={channel.tvgLogo} className="w-full h-full object-contain" onError={(e) => e.currentTarget.parentElement?.classList.add('hidden')} />
                             </div>
                             {channel.name}
                         </li>
