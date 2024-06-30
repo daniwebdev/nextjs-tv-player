@@ -11,18 +11,25 @@ export default function PlaylistSidebar() {
     const [listChannels, setListChannels] = useState<M3uChannel[]>([]);
 
     const playerState = usePlayerState();
-
+    const masterSourceUrl = "https://iptv-org.github.io/iptv/index.m3u";
     const playlistSourceUrl = "https://iptv-org.github.io/iptv/countries/id.m3u";
   
     const playlistSource = new Playlist(playlistSourceUrl);
+    const masterSource = new Playlist(masterSourceUrl);
   
     useEffect(() => {
       playlistSource.getPlaylist().then(playlist => {
         const items = channels.concat(playlist.channels);
 
         setChannels(items);
-
         setListChannels(items);
+      })
+
+      masterSource.getPlaylist().then(playlist => {
+        // const items = channels.concat(playlist.channels);
+
+        // setChannels(items);
+        // setListChannels(items);
       })
     }, [])
 
@@ -53,7 +60,7 @@ export default function PlaylistSidebar() {
                 listChannels.map((channel, index) => {
 
                     return (
-                        <li key={index} className="px-3 flex justify-start gap-3 items-center py-2 border-b border-b-dark-800 text-sm" onClick={() => {
+                        <li key={index} className="px-3 flex cursor-pointer hover:bg-dark-700 justify-start gap-3 items-center py-2 border-b border-b-dark-800 text-sm" onClick={() => {
                             onClickChannel(channel);
                         }}>
                             <div className="w-10 h-10 flex-shrink-0">

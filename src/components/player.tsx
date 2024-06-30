@@ -24,15 +24,15 @@ export default function ChannelPlayer({
             const hls = new Hls();
             hls.loadSource(src);
             hls.attachMedia(videoRef.current);
-            hls.on(Hls.Events.MANIFEST_PARSED, () => {
-                videoRef.current?.play();
-            });
+            // hls.on(Hls.Events.MANIFEST_PARSED, () => {
+            //     videoRef.current?.play();
+            // });
 
         } else if (videoRef.current?.canPlayType('application/vnd.apple.mpegurl')) {
             videoRef.current.src = src;
-            videoRef.current.addEventListener('loadedmetadata', () => {
-                videoRef.current?.play();
-            });
+            // videoRef.current.addEventListener('loadedmetadata', () => {
+            //     videoRef.current?.play();
+            // });
         }
     }, [src]);
 
