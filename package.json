@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@iptv/playlist": "^1.0.1",
+    "hls.js": "^1.5.11",
+    "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.4"
+    "react-hls-player": "^3.0.7",
+    "zustand": "^4.5.4"
   },
   "devDependencies": {
     "typescript": "^5",

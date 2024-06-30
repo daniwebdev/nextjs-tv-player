@@ -31,3 +31,26 @@ body {
     text-wrap: balance;
   }
 }
+
+
+/* scrollbar styles */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-dark-700;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-900;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  width: 10px;
+}
