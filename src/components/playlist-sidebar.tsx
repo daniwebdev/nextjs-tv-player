@@ -1,3 +1,4 @@
+// eslint-disable-next-line jsx-a11y/alt-text
 'use client'
 
 import Playlist from "@/lib/playlist";
@@ -43,7 +44,7 @@ export default function PlaylistSidebar() {
     }
 
     return (<>
-        <h2 className="p-3 text-xl border-b border-b-dark-800 bg-dark-900">Playlist</h2>
+        <h2 className="p-3 text-xl border-b border-b-dark-800 bg-dark-900">Channels</h2>
         <div className="h-[32px]">
             <input onChange={onSearch} type="text" className="w-full px-3  h-full border-b border-b-dark-800 bg-dark-900 placeholder:text-sm placeholder:italic outline-none text-dark-400 placeholder:text-dark-500" autoFocus placeholder="Search Channels" />
         </div>
