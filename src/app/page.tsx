@@ -48,8 +48,8 @@ export default function Home() {
         <PlaylistSidebar></PlaylistSidebar>
       </aside>
       <section className="relative w-full">
-        <div className="p-3 absolute bottom-0 right-0 text-sm z-[1000]">
-          Created by <a target="_blank" href="https://github.com/daniwebdev">@daniwebdev</a>
+        <div className="p-3 absolute bottom-0 right-0 text-sm z-[1000] bg-black/50 rounded-tl-xl px-6">
+          Created by <a target="_blank" href="https://github.com/daniwebdev" className="text-blue-500">@daniwebdev</a>
         </div>
         <ChannelPlayer key={videoSrc} src={videoSrc}></ChannelPlayer>
       </section>
